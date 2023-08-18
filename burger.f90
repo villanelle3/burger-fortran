@@ -150,6 +150,13 @@ implicit none
 complex*16,dimension(n),intent(out)::k
 complex*16,dimension(n),intent(in)::y
 real*8,intent(in)::dt
+!1. Calculate the multiplicative of the velocity at physical space, as uu;
+!2. Transform the product to spectral space, as uu;
+!3. Calculate the derivative and multiply by 1/2 after calculating the advective form,
+!4. Transform the field u to spectral space;
+!5. Calculate the derivatives, iku^;
+!6. Calculate the inverse transform of the velocity derivatives multiplied by the velocity in the physical space.
+!7. Transform the derivative from the physical space to spectral space,
 
 	CALL ZFFT1D(y,N,0,B)	
 	CALL ZFFT1D(y,N,+1,B)	
