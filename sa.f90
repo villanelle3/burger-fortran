@@ -8,7 +8,6 @@ real*8::pi=acos(-1.0d0),e,der
 integer*4::i,j
 real*8, dimension(N):: ub
 
-
 e = 0.0d0
 der = 0.0d0
 ub = 0.0d0
